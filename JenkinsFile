@@ -36,12 +36,12 @@ pipeline {
             }
         }
 
- /*       stage ('Run tests') {
+        stage ('Run tests') {
             steps {
                 sh 'npm test'
             }
         }
-*/
+
         stage('Deploy to Heroku') {
           steps {
               withCredentials([usernameColonPassword(credentialsId: 'Heroku', variable: 'HEROKU_CREDENTIALS' )]){
