@@ -14,11 +14,12 @@ const app = express();
 // connecting the database
 
 const MONGODB_URI = config.mongoURI[app.settings.env]
+console.log(`Connected to Database: ${MONGODB_URI}`)
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true  },(err)=>{
     if (err) {
         console.log(err)
     }else{
-        console.log(`Connected to Database: ${MONGODB_URI}`)
+        
     }
 });
 
