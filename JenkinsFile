@@ -36,11 +36,11 @@ pipeline {
             }
         }
 
-        // stage ('Run tests') {
-        //     steps {
-        //         sh 'npm test'
-        //     }
-        // }
+        stage ('Run tests') {
+            steps {
+                sh 'npm test'
+            }
+        }
 
         stage('Deploy to Heroku') {
           steps {
